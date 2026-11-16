@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PEMILOS & MPK KELAS 11 - SMAN 4 Babelan 2026</title>
+<title>PEMILOS & MPK KELAS 10 - SMAN 4 Babelan 2026</title>
 <style>
 :root{--blue:#0051ff;}
 *{box-sizing:border-box;font-family:Segoe UI,sans-serif}
@@ -30,10 +30,10 @@ button:disabled{background:#94a3b8;cursor:not-allowed}
 <body>
 <header>
 <h1>🗳️ PEMILOS SMAN 4 BABELAN 2026</h1>
-<p>OSIS & MPK - ALTISIX | AVERIONS (KHUSUS KELAS 11)</p>
+<p>OSIS & MPK - ALTISIX | AVERIONS (KHUSUS KELAS 10)</p>
 </header>
 <div class="container">
-<div id="loading" style="color:#fff;text-align:center;padding:40px">Loading data kelas 11... ⏳</div>
+<div id="loading" style="color:#fff;text-align:center;padding:40px">Loading data kelas 10... ⏳</div>
 <div id="main" style="display:none">
 <div class="section-title">🔵 PILIH KETUA OSIS - 3 PASLON</div>
 <div class="paslon-grid" id="gridOSIS"></div>
@@ -52,7 +52,7 @@ button:disabled{background:#94a3b8;cursor:not-allowed}
 </div>
 <script>
 const API = "https://script.google.com/macros/s/AKfycbwsmtIWUbMblp4VpA7f7QTWptsTM2iS7CPVd5szBj6n3T98-bvMyWrFEnGOOrgg73tfyw/exec";
-const NAMA_WEB = "WEB KELAS 11";
+const NAMA_WEB = "WEB KELAS 10";
 
 const CONFIG = {
   OSIS: [
@@ -101,8 +101,8 @@ async function load(){
       localStorage.setItem('sudah_vote_pemilos', JSON.stringify(SUDAH_VOTE));
     }
     const selK = document.getElementById('kelompok'); 
-    selK.innerHTML = '<option value="">-- Pilih Kelas 11 --</option>';
-    Object.keys(DATA).filter(k => k.startsWith('XI.')).sort().forEach(k => selK.innerHTML += `<option value="${k}">${k}</option>`);
+    selK.innerHTML = '<option value="">-- Pilih Kelas 10 --</option>';
+    Object.keys(DATA).filter(k => k.startsWith('X.')).sort().forEach(k => selK.innerHTML += `<option value="${k}">${k}</option>`);
     document.getElementById('loading').style.display = 'none';
     document.getElementById('main').style.display = 'block';
     selK.onchange = upd; renderPaslon(); upd();
